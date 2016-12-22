@@ -1,0 +1,23 @@
+{
+  "version": "2",
+  "services": {
+
+    "app": {
+      "image": "mhart/alpine-node",
+      "volumes": [
+        "./:/app"
+      ],
+      ports: [
+        "58321:80"
+      ],
+
+      "command": [
+        "npm",
+        "start"
+      ],
+      "working_dir": "/app/",
+
+      "restart": "unless-stopped"
+    }
+  }
+}
